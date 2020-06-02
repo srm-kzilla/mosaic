@@ -12,7 +12,7 @@ const CopyToClipboard: React.FC<CopyToClipboardProps> = (
   props: CopyToClipboardProps
 ) => {
   const { hex, setCopied } = props;
-  const handleCopy = (color) => {
+  const handleCopy = (color: any) => {
     navigator.clipboard.writeText(color);
     setCopied(true);
     setTimeout(() => {

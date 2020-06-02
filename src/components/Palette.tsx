@@ -6,13 +6,13 @@ import CopyToClipboard, { CopyToClipboardMessage } from "./CopyToClipboard";
 const Palette: React.FC = () => {
   const { hexValue } = useContext(StoreContext);
   const [copy, setCopied] = useState(false);
-  const color1 = hexValue[0];
-  const color2 = hexValue[1];
-  const color3 = hexValue[2];
-  const color4 = hexValue[3];
-  const color5 = hexValue[4];
+  const color1 = hexValue![0];
+  const color2 = hexValue![1];
+  const color3 = hexValue![2];
+  const color4 = hexValue![3];
+  const color5 = hexValue![4];
 
-  const copyToClipboard = (color) => {
+  const copyToClipboard = (color: any) => {
     console.log(color);
     navigator.clipboard.writeText(color);
     setCopied(true);
@@ -47,7 +47,7 @@ const Palette: React.FC = () => {
         key="kz-palette-color-5"
         onClick={() => copyToClipboard(color5)}
       />
-      <CopyToClipboard hex={hexValue} setCopied={setCopied} />
+      <CopyToClipboard hex={hexValue!} setCopied={setCopied} />
       {copy && <CopyToClipboardMessage />}
       <style jsx>{`
         .kz-palette-container {

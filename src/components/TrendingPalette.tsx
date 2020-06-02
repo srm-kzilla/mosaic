@@ -1,6 +1,6 @@
 import React from "react";
 
-import data from "../utils/default/trending.json";
+import data from "../utils/trending.json";
 
 const TrendingPalette: React.FC = () => {
   const trendingPalettes = data.palettes;

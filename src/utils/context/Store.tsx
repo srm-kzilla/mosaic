@@ -7,7 +7,7 @@ type StoreProps = {
 type SetValue = (value: any) => void;
 
 type StoreContextType = {
-  hexValue?: Object;
+  hexValue?: number[][];
   setHexValue?: SetValue;
 };
 
