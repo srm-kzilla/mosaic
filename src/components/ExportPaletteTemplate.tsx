@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import domtoimage from "dom-to-image";
+import { saveAs } from "file-saver";
 
 const ExportPaletteTemplate = () => {
+  const templateDOM = useRef<HTMLDivElement>(null);
+  function exportPalette(templateDOM: any) {
+    domtoimage.toBlob(templateDOM.current, {}).then(function (blob) {
+      saveAs(blob, "Mosaic.png");
+    });
+  }
+
+  useEffect(() => {
+    exportPalette(templateDOM);
+  }, []);
+
   return (
-    <div className="kz-palette-template-container">
+    <div className="kz-palette-template-container" ref={templateDOM}>
       <div className="kz-palette-template-wrapper">
         <div className="kz-palette-template-navbar">
           <h6 className="kz-palette-template-header">
@@ -54,7 +67,8 @@ const ExportPaletteTemplate = () => {
           width: 500px;
           background-color: #ffffff;
           border-radius: 20px;
-          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+            0 10px 10px rgba(0, 0, 0, 0.22);
         }
         .kz-palette-template-header {
           font-size: 12px;

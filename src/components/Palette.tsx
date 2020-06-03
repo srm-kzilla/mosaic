@@ -60,7 +60,7 @@ const Palette: React.FC = () => {
           border-radius: 5px;
           margin-top: 30px;
           margin-left: 10px;
-          cursor: pointer;
+          cursor: copy;
         }
         .kz-palette-color-1 {
           background-color: rgb(${color1});

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 import ClipboardIcon from "../lib/icons/clipboard.png";
 import DownloadIcon from "../lib/icons/download.png";
+import ExportPaletteTemplate from "./ExportPaletteTemplate";
 
 type CopyToClipboardProps = {
   hex: object;
@@ -12,6 +13,7 @@ const CopyToClipboard: React.FC<CopyToClipboardProps> = (
   props: CopyToClipboardProps
 ) => {
   const { hex, setCopied } = props;
+  const [display, isDisplay] = useState(false);
   const handleCopy = (color: any) => {
     navigator.clipboard.writeText(color);
     setCopied(true);
@@ -19,11 +21,22 @@ const CopyToClipboard: React.FC<CopyToClipboardProps> = (
       setCopied(false);
     }, 1000);
   };
-  console.log(hex);
+
+  const handleExport = () => {
+    isDisplay(true);
+    setTimeout(() => {
+      isDisplay(false);
+    }, 4000);
+  };
   return (
     <div className="kz-container">
       <div className="kz-icon-wrapper">
-        <img src={DownloadIcon} className="kz-icon" alt="download-icon" />
+        <img
+          src={DownloadIcon}
+          className="kz-icon"
+          alt="download-icon"
+          onClick={handleExport}
+        />
       </div>
       <div className="kz-icon-wrapper">
         <img
@@ -32,6 +45,9 @@ const CopyToClipboard: React.FC<CopyToClipboardProps> = (
           alt="clipboard-icon"
           onClick={() => handleCopy(hex)}
         />
+      </div>
+      <div className="kz-template-container">
+        {display && <ExportPaletteTemplate />}
       </div>
       <style jsx>
         {`
@@ -49,6 +65,11 @@ const CopyToClipboard: React.FC<CopyToClipboardProps> = (
             height: 20px;
             width: auto;
             cursor: pointer;
+          }
+          .kz-template-container {
+            position: absolute;
+            top: -999px;
+            left: -999px;
           }
         `}
       </style>
