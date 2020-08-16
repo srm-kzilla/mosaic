@@ -1,20 +1,33 @@
-import React, { useState, ReactNode } from "react";
+import React, { useState, useEffect, ReactNode } from "react";
+
+import { DEFAULT_PALETTE } from "../constants";
 
 type StoreProps = {
   children: ReactNode;
 };
 
-type SetValue = (value: any) => void;
-
 type StoreContextType = {
-  hexValue?: number[][];
-  setHexValue?: SetValue;
+  hexValue: string[];
+  setHexValue: (values: string[]) => void;
 };
 
-export const StoreContext = React.createContext<StoreContextType>({});
+export const StoreContext = React.createContext<StoreContextType>({
+  hexValue: [],
+  setHexValue: () => {
+    throw new Error("Used StoreContext outside of provider");
+  },
+});
 
 const Store = ({ children }: StoreProps) => {
-  const [hexValue, setHexValue] = useState([[214,78,69],[247,242,163],[201,216,147],[57,141,112],[62,80,64]]);
+  let [hexValue, setHexValue] = useState(DEFAULT_PALETTE);
+
+  useEffect(() => {
+    let storedPalette = window.localStorage.getItem("defaultPalette");
+    if (storedPalette !== null) {
+      setHexValue(JSON.parse(storedPalette));
+    }
+  }, []);
+
   return (
     <StoreContext.Provider
       value={{

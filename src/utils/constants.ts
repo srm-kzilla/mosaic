@@ -4,3 +4,11 @@ export const API = {
     FETCH_COLOR_PALETTE: "/",
   },
 };
+
+export const DEFAULT_PALETTE = [
+  "#E9C469",
+  "#F5A362",
+  "#E97051",
+  "#E76442",
+  "#E85B33",
+];
