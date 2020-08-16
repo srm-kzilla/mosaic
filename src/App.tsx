@@ -12,14 +12,14 @@ const App = () => {
   const [myPalette, setMyPalette] = useState([] as any);
 
   useEffect(() => {
-    let a: any = window.localStorage.getItem("hex");
-    let r: any = JSON.parse(a);
-    setMyPalette(r);
+    let savedPalette: string = window.localStorage.getItem("hex")!;
+    let parsedPalette: string[][] = JSON.parse(savedPalette);
+    setMyPalette(parsedPalette);
   }, []);
 
   const handleSave = (value: boolean) => {
     let savedPalette: string = window.localStorage.getItem("hex")!;
-    let myPalettes: any = [];
+    let myPalettes: string[][] = [];
 
     if (savedPalette === null) {
       myPalettes.push([...hexValue]);
@@ -42,7 +42,6 @@ const App = () => {
   };
 
   const handleHexChange = (colors: string[]) => {
-    console.log(colors);
     setHexValue(colors);
   };
 

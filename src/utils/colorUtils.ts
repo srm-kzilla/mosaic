@@ -2,11 +2,9 @@ import { RGBPalette, RGBColor, RGBNumber } from "./types";
 import { ntc } from "./ntc";
 
 export const getRGBPalette = (hexColor: string[]) => {
-  console.log("received hex palette: ", hexColor);
   let RGBColor: any = [];
 
   hexColor.map((hexString: string) => RGBColor.push(getRGBColor(hexString)));
-  console.log(RGBColor);
   return RGBColor;
 };
 
