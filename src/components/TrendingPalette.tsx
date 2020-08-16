@@ -82,6 +82,7 @@ const TrendingPalette = () => {
           padding: 5px;
           margin-block-start: 0px !important;
           margin-block-end: 0px !important;
+          font-size: 16px;
         }
         .kz-palette-expand {
           background-color: #f9f9f9;

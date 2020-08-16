@@ -101,6 +101,7 @@ const GeneratePalette = (props: GeneratePaletteProps) => {
           display: inline-block;
           color: var(--title-color);
           font-family: "Helvetica-Bold";
+          font-size: 16px;
         }
         .kz-icon-wrapper {
           display: inline-block;

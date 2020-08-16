@@ -168,6 +168,8 @@ const Color = (props: ColorProps) => {
           cursor: pointer;
           fill: ${iconColor(color, false)};
           padding-top: 18px;
+          font-family: "Helvetica";
+          font-size: 0.8rem;
         }
         .kz-edit-icon-${classNameProp}:hover {
           fill: ${iconColor(color, true)};
