@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Mosaic",
   "version": "1.0.0",
-  "description": "Colours so popping will leave your heart pounding",
+  "description": "Hunt your hues. Directly from your browser. 🖍",
   "short_name": "Mosaic",
   "icons": {
     "16": "icon16.png",
