@@ -1,6 +1,7 @@
 export type RGBPalette = [RGBColor, RGBColor, RGBColor, RGBColor, RGBColor];
 
 export type RGBColor = [RGBNumber, RGBNumber, RGBNumber] | "N";
+
 export type RGBNumber =
   | 0
   | 1

@@ -1,3 +1,24 @@
 .App {
+  width: 410px;
   margin: 20px;
+}
+
+@font-face {
+  font-family: Manrope-Regular;
+  src: url("./lib/fonts/Manrope-Regular.otf");
+}
+
+@font-face {
+  font-family: Helvetica-Bold;
+  src: url("./lib/fonts/HelveticaNowDisplay-Bold.otf");
+}
+
+@font-face {
+  font-family: Helvetica-Regular;
+  src: url("./lib/fonts/HelveticaNowDisplay-Regular.otf");
+}
+
+@font-face {
+  font-family: Helvetica-Light;
+  src: url("./lib/fonts/HelveticaNowDisplay-Light.otf");
 }
