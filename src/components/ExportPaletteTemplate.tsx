@@ -14,9 +14,22 @@ const ExportPaletteTemplate = (props: ExportPaletteTemplateProps) => {
   const templateDOM = useRef<HTMLDivElement>(null);
 
   function exportPalette(templateDOM: any) {
-    domtoimage.toBlob(templateDOM.current, {}).then(function (blob) {
-      saveAs(blob, "Mosaic.png");
-    });
+    const element = templateDOM.current;
+    const scale = 2;
+    domtoimage
+      .toBlob(element, {
+        height: element.offsetHeight * scale,
+        style: {
+          transform: `scale(${scale}) translate(${
+            element.offsetWidth / 2 / scale
+          }px, ${element.offsetHeight / 2 / scale}px)`,
+        },
+        width: element.offsetWidth * scale,
+      })
+      .then(function (blob) {
+        const url = window.URL.createObjectURL(blob);
+        saveAs(url, "Mosaic.png");
+      });
   }
 
   useEffect(() => {
