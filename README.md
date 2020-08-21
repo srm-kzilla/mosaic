@@ -46,7 +46,7 @@ Load the `manifest.json` file within the `build` folder to load Mosaic into your
 
 ## Installation 🔨
 
-[Download from Chrome Web Store](#)
+[Download from Chrome Web Store](http://kzilla.xyz/ZvSRu)
 [Download from Firefox Add-ons](#)
 <img src="https://img.shields.io/badge/-Cutting--edge-blue" alt="Cutting-edge"/> [Download for Safari from Mac App Store](#) (Available on [macOS 10.14+](https://www.apple.com/macos/big-sur-preview/) or later)
 
