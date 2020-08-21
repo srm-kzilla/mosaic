@@ -62,9 +62,8 @@ Please read `Contributing.md` for details on our code of conduct, and the proces
 
 ## Shout outs 💥
 
-| <p align="center">![Shrey Sachdeva](https://github.com/sachdeva-shrey.png?size=128)<br>[Shrey Sachdeva](https://github.com/sachdeva-shrey)</p>
+<p align="center">![Shrey Sachdeva](https://github.com/sachdeva-shrey.png?size=128)<br>[Shrey Sachdeva](https://github.com/sachdeva-shrey)</p>
 > This project wouldn't have been possible without these amazing projects — [Colormind](http://colormind.io/) and [Name that Color](http://chir.ag/projects/name-that-color)
-| ---------------------------------------------------------------------------------------------------------------------------------- |
 
 ## Forking this repo 🚨
 
