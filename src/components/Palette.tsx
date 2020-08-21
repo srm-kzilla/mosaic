@@ -5,7 +5,13 @@ import reactCSS from "reactcss";
 import TooltipComponent from "./TooltipComponent";
 import { iconColor } from "../utils/iconColor";
 import * as Icon from "../lib/icons/index";
-import { DEFAULT_COLORS } from "../utils/default";
+import { DEFAULT_PICKER_COLORS } from "../utils/defaultPicker";
+
+declare module "react-color" {
+  interface CompactPickerProps {
+    styles?: any;
+  }
+}
 
 type PaletteProps = {
   hexValue: string[];
@@ -120,7 +126,7 @@ const Color = (props: ColorProps) => {
                 <CompactPicker
                   styles={styles}
                   color={hex}
-                  colors={DEFAULT_COLORS}
+                  colors={DEFAULT_PICKER_COLORS}
                   onChangeComplete={(color) => {
                     handleChangeComplete(color);
                   }}

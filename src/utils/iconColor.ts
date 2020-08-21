@@ -1,5 +1,4 @@
 // Calculate contrast ratio between bg and fg to determine icon color
-
 export const iconColor = (bgColor: string, hover: boolean) => {
   const color = bgColor.charAt(0) === "#" ? bgColor.substring(1, 7) : bgColor;
   const r = parseInt(color.substring(0, 2), 16); // hexToR

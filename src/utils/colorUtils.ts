@@ -3,7 +3,6 @@ import { ntc } from "./ntc";
 
 export const getRGBPalette = (hexColor: string[]) => {
   let RGBColor: any = [];
-
   hexColor.map((hexString: string) => RGBColor.push(getRGBColor(hexString)));
   return RGBColor;
 };
@@ -23,7 +22,7 @@ export const getRGBColor = (hexColor: string) => {
 };
 
 export const getHexPalette = (palette: any): any[] => {
-  let hexColors: any[] = [];
+  let hexColors: string[] = [];
   // eslint-disable-next-line array-callback-return
   palette.map((rgbColor: RGBColor) => {
     hexColors.push(getHexColor(rgbColor));

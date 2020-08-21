@@ -1,4 +1,4 @@
-export const DEFAULT_COLORS = [
+export const DEFAULT_PICKER_COLORS = [
   "#353b48",
   "#7f8fa6",
   "#f5f6fa",
