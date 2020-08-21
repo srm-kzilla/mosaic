@@ -1,12 +1,14 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff",
-  "version": "1.0",
   "manifest_version": 2,
+  "name": "Mosaic",
+  "version": "1.0.0",
+  "description": "Hunt your hues. Directly from your browser. 🖍",
+  "short_name": "Mosaic",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
   "browser_action": {
     "default_popup": "index.html"
   },
